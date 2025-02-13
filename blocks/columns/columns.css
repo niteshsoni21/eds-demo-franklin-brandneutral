@@ -1,0 +1,38 @@
+.columns>div {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.columns img {
+  width: 100%;
+}
+
+.columns>div>div {
+  order: 1;
+}
+
+.columns>div>.columns-img-col {
+  order: 0;
+}
+
+.columns-2-cols .columns-img-col {
+  width: 50%;
+}
+
+.columns>div>.columns-img-col img {
+  display: block;
+  border-radius: 5px;
+}
+
+@media (min-width: 900px) {
+  .columns>div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 20px;
+  }
+
+  .columns>div>div {
+    order: unset;
+  }
+}

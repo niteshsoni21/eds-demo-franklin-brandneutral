@@ -1,0 +1,37 @@
+.table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table table {
+  width: 60%;
+  max-width: 60%;
+  border-collapse: collapse;
+}
+
+.table table th {
+  font-weight: 700;
+}
+
+.table table th,
+.table table td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #000;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.table-container p {
+  line-height: 26px;
+  font-size: 18px;
+}
+
+.table-container {
+  margin-bottom: 57px;
+}
+
+/* striped variant */
+.table.striped tbody tr:nth-child(odd) {
+  background-color: var(--overlay-background-color);
+}

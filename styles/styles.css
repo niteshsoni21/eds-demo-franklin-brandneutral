@@ -1,0 +1,264 @@
+/*
+ * Copyright 2020 Adobe. All rights reserved.
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  /* colors */
+  --link-color: #035fe6;
+  --link-hover-color: #136ff6;
+  --background-color: #fff;
+  --overlay-background-color: #eee;
+  --highlight-background-color: #ccc;
+  --text-color: #000;
+
+  /* fonts */
+  --body-font-family: "Roboto Regular";
+
+  /* body sizes */
+  --body-font-size-m: 22px;
+  --body-font-size-s: 18px;
+  --body-font-size-xs: 16px;
+
+  /* heading sizes */
+  --heading-font-size-xxl: 48px;
+  --heading-font-size-xl: 40px;
+  --heading-font-size-l: 32px;
+  --heading-font-size-m: 24px;
+  --heading-font-size-s: 20px;
+  --heading-font-size-xs: 18px;
+
+  /* nav height */
+  --nav-height: 48px;
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("./fonts/Roboto-Bold.ttf");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Black";
+  src: url("./fonts/Roboto-Black.ttf");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("./fonts/Roboto-Medium.ttf");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("./fonts/Roboto-Regular.ttf");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url("./fonts/Roboto-Light.ttf");
+  font-display: swap;
+}
+
+@media (min-width: 900px) {
+  :root {
+    --heading-font-size-xxl: 60px;
+    --heading-font-size-xl: 48px;
+    --heading-font-size-l: 36px;
+    --heading-font-size-m: 30px;
+    --heading-font-size-s: 24px;
+    --heading-font-size-xs: 22px;
+  }
+}
+
+body {
+  font-size: 16px;
+  font-family: "Roboto Regular";
+  margin: 0;
+  padding: 0;
+}
+
+body.appear {
+  display: unset;
+}
+
+header {
+  height: var(--nav-height);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  scroll-margin: calc(var(--nav-height) + 1em);
+}
+
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
+
+p,
+dl,
+ol,
+ul,
+pre,
+blockquote,
+button,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+hr {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border: 0;
+  border-bottom: 1px solid var(--overlay-background-color);
+}
+
+code,
+pre,
+samp {
+  font-family: var(--fixed-font-family);
+  font-size: var(--body-font-size-s);
+}
+
+code,
+samp {
+  padding: 0.125em;
+}
+
+pre {
+  overflow: scroll;
+}
+
+main pre {
+  background-color: var(--overlay-background-color);
+  padding: 1em;
+  border-radius: 0.25em;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+a:hover,
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a.button:hover,
+a.button:focus,
+button:hover,
+button:focus {
+  cursor: pointer;
+}
+
+button:disabled,
+button:disabled:hover {
+  background-color: var(--overlay-background-color);
+  cursor: unset;
+}
+
+a.button.secondary,
+button.secondary {
+  background-color: unset;
+  border: 2px solid currentcolor;
+  color: var(--text-color);
+}
+
+main img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.icon {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+
+.icon svg {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+/* custom css changes for layout */
+main {
+  margin: 0 12px;
+}
+
+@media screen and (min-width: 1023px) {
+  main {
+    margin: 0 5.8%;
+  }
+
+  .authorblock-container {
+    overflow: hidden;
+  }
+
+  .authorblock-container .default-content-wrapper,
+  .section.left-container {
+    width: 57.5%;
+    margin-right: 10.4%;
+    float: left;
+
+  }
+
+  .section.left-container {
+    padding-top: 40px;
+    padding-bottom: 39px;
+  }
+
+  .authorblock-wrapper,
+  .section.right-container {
+    float: left;
+    width: 32.1%;
+  }
+}
